@@ -19,3 +19,10 @@ Route::prefix('api/')->group(function (){
 
     Route::get('wechat/index','Api\WechatController@index');
 });
+Route::group(['middleware' => ['web', 'wechat.oauth']], function () {
+    Route::get('/user', function () {
+        $user = session('wechat.oauth_user.default'); // 拿到授权用户资料
+
+        dd($user);
+    });
+});

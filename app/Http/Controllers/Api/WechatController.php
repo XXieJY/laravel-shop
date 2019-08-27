@@ -13,7 +13,6 @@ class WechatController extends Controller{
             exit;
         }
     }
-
     private function checkSignature()
     {
         $signature = request()->query("signature");
@@ -22,10 +21,9 @@ class WechatController extends Controller{
         $token = self::TOKEN;
         $tmpArr = array($token, $timestamp, $nonce);
         sort($tmpArr);
-        $tmpStr = implode( $tmpArr );
-        $tmpStr = sha1( $tmpStr );
-
-        if( $tmpStr == $signature ){
+        $tmpStr = implode($tmpArr);
+        $tmpStr = sha1($tmpStr);
+        if($tmpStr == $signature){
             return true;
         }else{
             return false;
