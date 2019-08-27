@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    protected $table = "sys_user";
+    protected $table = "user";
     protected $fillable = [
         'nickname','weixin_openid','image_head'
     ];
