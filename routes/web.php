@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::prefix('api/')->group(function (){
 
     Route::get('wechat/index','Api\WechatController@index');
+    Route::get('auth/wechatStore','Api\AuthController@wechatStore');
 });
 Route::group(['middleware' => ['web', 'wechat.oauth']], function () {
     Route::get('/user', function () {
