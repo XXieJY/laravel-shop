@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('api')->group(function (){
+
+    Route::get('wechat/index','App\Http\Controllers\WechatController@index');
+});
