@@ -7,6 +7,6 @@ class AuthController extends Controller{
 
           $wechatUser = session('wechat.oauth_user.default');
 
-          return $wechatUser;
+          dd($wechatUser);
      }
 }
