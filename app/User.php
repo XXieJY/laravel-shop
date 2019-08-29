@@ -10,4 +10,6 @@ class User extends Model
     protected $fillable = [
         'nickname','weixin_openid','image_head'
     ];
+
+
 }

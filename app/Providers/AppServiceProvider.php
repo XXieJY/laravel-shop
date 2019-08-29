@@ -14,6 +14,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+      //  echo 456;
     }
 
     /**
@@ -24,5 +25,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+       // echo 123;
     }
 }
