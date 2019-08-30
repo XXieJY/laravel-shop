@@ -19,3 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('index',function (){
     return "hello world";
 });
+
+Route::group(['prefix'=>'v1','namespace'=>'Api\V1'],function (){
+    Route::resource('user','UserController');
+});
